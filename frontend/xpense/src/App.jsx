@@ -10,21 +10,24 @@ import {
   Route,
   Navigate
 } from "react-router-dom"
+import UserProvider from './context/userContext'
 
 const App = () => {
   return (
-    <div>
-      <Router>
-        <Routes>
-          <Route path='/' element={<Root/>} />
-          <Route path='/login' element={<Login/>} />
-          <Route path='/signup' element={<SignUp/>} />
-          <Route path='/dashboard' element={<Home/>} />
-          <Route path='/expense' element={<Income/>} />
-          <Route path='/income' element={<Expense/>} />
-        </Routes>
-      </Router>
-    </div>
+    <UserProvider>
+      <div>
+        <Router>
+          <Routes>
+            <Route path='/' element={<Root/>} />
+            <Route path='/login' element={<Login/>} />
+            <Route path='/signup' element={<SignUp/>} />
+            <Route path='/dashboard' element={<Home/>} />
+            <Route path='/expense' element={<Income/>} />
+            <Route path='/income' element={<Expense/>} />
+          </Routes>
+        </Router>
+      </div>
+    </UserProvider>
   )
 }
 
