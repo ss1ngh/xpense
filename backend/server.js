@@ -13,6 +13,7 @@ const app = express();
 app.get('/', (req, res) => {
     res.send("Server is running");
 })
+
 //Middleware to handle CORS
 app.use(
     cors({
