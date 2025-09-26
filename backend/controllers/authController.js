@@ -30,11 +30,6 @@ exports.registerUser = async(req, res) => {
     profileImageUrl
    });
 
-   res.status(201).json({
-    id: user._id,
-    user,
-    token: generateToken(user._id),
-   })
   } catch(err) {
     res
     .status(500)
